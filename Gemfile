@@ -10,6 +10,13 @@ gem 'haml'
 gem 'haml-rails'
 
 gem 'grape'
+# disables the security feature of strong_params at the model layer, allowing you the use of Grape's own params validation instead.
+gem "hashie-forbidden_attributes"
+gem 'grape-rails-routes'
+
+
+gem 'grape-entity'
+gem 'grape-swagger'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -47,5 +54,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'pry-rails'
 end
 
