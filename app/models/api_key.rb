@@ -9,7 +9,7 @@ class ApiKey < ActiveRecord::Base
   end
 
   def update_access_token
-    update_attributes(access_token: SecureRandom.hex)
+    update_attributes(access_token: SecureRandom.hex, expires_at: DateTime.now+30)
   end
 
   private

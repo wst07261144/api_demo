@@ -14,7 +14,7 @@ module Twitter
 
       def current_user
         api_key = ApiKey.find_by(access_token: params[:token])
-        api_key && !api_key.expired? ? @current_user = User.find(api_key.user_id) : false
+        api_key ? @current_user = User.find(api_key.user_id) : false
       end
     end
 
